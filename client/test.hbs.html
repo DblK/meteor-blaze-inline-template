@@ -1,10 +1,12 @@
 <template name="Test">
     TEST Template :<br />
 
-    {{#if myProp}}
-        Here is the display
-    {{else}}
-        No myProp passed
-    {{/if}}
+    <div class="test {{#if myProp}}test-my-prop{{/if}}">
+        {{#if myProp}}
+            true
+        {{else}}
+            false
+        {{/if}}
+    </div>
     <br />
 </template>

@@ -3,8 +3,8 @@ import { Template } from 'meteor/templating';
 import './main.html';
 import './test.js';
 
-Template.hello.helpers({
+Template.TestWrapper.helpers({
   async doSomething() {
-    return Promise.resolve(true)
+    return await Promise.resolve(true)
   }
 });

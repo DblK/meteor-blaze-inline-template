@@ -5,8 +5,14 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> Test}} <!-- Good as expected -->
-  {{> Test myProp=true}}  <!-- Good as expected -->
-  {{> Test myProp=false}}  <!-- Good as expected -->
-  {{> Test myProp=doSomething}}  <!-- Fails... -->
+  {{> TestWrapper}}
 </body>
+
+<template name="TestWrapper">
+  <!-- To succeed content of div MUST be "true" AND class "test-my-prop" should be added! -->
+
+  {{> Test}} <!-- false as expected -->
+  {{> Test myProp=true}}  <!-- true as expected -->
+  {{> Test myProp=false}}  <!-- false as expected -->
+  {{> Test myProp=doSomething}}  <!-- true but class 'test-my-prop' is not added to div -->
+</template>
