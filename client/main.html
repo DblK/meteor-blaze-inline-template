@@ -1,0 +1,12 @@
+<head>
+  <title>Meteor App</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> Test}} <!-- Good as expected -->
+  {{> Test myProp=true}}  <!-- Good as expected -->
+  {{> Test myProp=false}}  <!-- Good as expected -->
+  {{> Test myProp=doSomething}}  <!-- Fails... -->
+</body>
